@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="10 seconds">
+
+	<conversionRule conversionWord="relativeX"
+		converterClass="com.qoomon.logbackx.RelativeCompositeConverter" />
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<charset>UTF-8</charset>
+			<pattern><![CDATA[%date{ISO8601} | %relativeX | %-8thread | %-5level{5} | %-32logger{32} | %-64message | %mdc%n%exception{short}]]></pattern>
+		</encoder>
+	</appender>
+
+	<root level="TRACE" additivity="false">
+		<appender-ref ref="CONSOLE" />
+	</root>
+
+</configuration>

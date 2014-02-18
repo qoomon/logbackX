@@ -1,0 +1,5 @@
+/target
+/.classpath
+/pom.xml.releaseBackup
+/release.properties
+/logFile.log.txt
